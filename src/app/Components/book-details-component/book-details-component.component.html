@@ -1,0 +1,69 @@
+@if(book$ | async; as book){
+    <div class="container">
+    <div class="row m-2" >
+    <div class=" m-auto mb-2 col-lg-6 col-md-6 col-sm-6  ">
+            <div>
+                <img src="{{book.imagesmallThumbnail}}" class="m-auto" id="mainimage" alt="..." >
+    
+            </div>
+        </div>
+    </div>    
+    <div class="row m-2" >   
+    <div class=" mb-2">
+    <h1>{{book.title||'UnKnown'}}</h1>
+    <h4 >{{book.authors||'UnKnown'}} </h4>
+    <div class=" d-flex d-flex-row m-2">
+        <span >
+          
+               <ng-container *ngFor="let starIndex of getStarsArray(counter); let i = index">
+                <i class="fa" [ngClass]="{'fa-sharp fa-star': i  <= counter && i + 1 !== counter, 'fa-star-half': i + 0.5 === counter, 'fa-star-o': i + 1 > counter}"></i>
+              </ng-container>
+              
+              
+              
+        </span>
+        <span class="m-2">{{book.averageRating||0}} </span>
+    </div>
+    <h2 class="mt-3 mb-3">&#x24; {{book.price}} </h2>
+@if (book.discount !== 0 && book.discount !== null){
+        <h3 class="mt-3 mb-3">{{ book.discount }}<img width="25px" height="20px" src="../../../assets/Images/discount (1).png" alt="Discount Image">
+        </h3>
+     
+      
+}
+    <p>{{book.description}}</p>
+    <div class=" d-flex d-flex-row mb-3 ">
+        <button class="bb" (click)="countmin()" >
+            <i class="fa-solid fa-minus fff"></i></button> 
+        
+          <span class="fs-4 ms-3 me-3"> {{count()}} </span>
+          <button class="bb" (click)="countplus()" >
+            <i class="fa-solid fa-plus fff"></i>
+        </button>   
+        </div> 
+        <div class="row justify-content-between d-flex d-flex-row m-2">
+             <button type="button" class=" btn btn-primary col-3 text-center bbo b2" style="background-color: white !important;
+            border: 1px solid #937DC2 !important; color: #937DC2 !important; " (click)="Writereview()">Write review</button>
+         
+         <button type="button" class=" btn btn-primary col-3 text-center bbo b11" style="    border: 1px solid #937DC2 !important; color: white !important;" (click)="addtocart(book)" >Add to cart</button>
+          
+         <button type="button" class=" btn btn-primary col-3 text-center bbo b2" style="background-color: white !important;
+         border: 1px solid #937DC2 !important; color: #937DC2 !important; " (click)="addtofav(book)">Add to favorite</button>
+         </div>
+    <hr style="color: #937DC2;"/>
+    <div class="row justify-content-between d-flex d-flex-row m-2">
+            <div class="col-5">
+                <div class="mb-3"> <span style="color: #937DC2;"> Publisher : </span> {{book.publisher||'UnKnown'}}</div>
+                <div class="mb-3"><span style="color: #937DC2;"> Language : </span> {{book.language||'UnKnown'}}</div>
+            </div>
+            <div class="col-5">
+                <div class="mb-3"> <span style="color: #937DC2;"> Publish Date : </span> {{book.publishedDate||'UnKnown'}}</div>
+                <div class="mb-3"><span style="color: #937DC2;"> category: </span> {{book.categories||'UnKnown'}}</div>
+            </div>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+    }
+    <app-cards-sec></app-cards-sec>

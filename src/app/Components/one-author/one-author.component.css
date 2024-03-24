@@ -1,0 +1,17 @@
+.content{
+    height: 70vh;
+}
+.ppp{
+    width: 86% !important;
+}
+@media (max-width: 767.98px) { 
+.content{
+    height: 100vh;
+    margin-top: 0;
+}
+.insidd{
+    margin-top: -90px !important;
+}
+
+
+ }

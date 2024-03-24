@@ -1,0 +1,11 @@
+.bbtn{
+    width: 36px;
+    height: 36px;
+    border: 0.5px  solid  rgb(147, 125, 194) !important;
+    border-radius: 100%;
+    background-color: rgb(147, 125, 194) !important ;
+    margin-inline: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

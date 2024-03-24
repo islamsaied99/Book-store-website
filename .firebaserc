@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "bookstore-3d2b8"
+  },
+  "targets": {
+    "bookstore-3d2b8": {
+      "hosting": {
+        "bookstore": [
+          "bookstore-3d2b8"
+        ]
+      }
+    }
+  }
+}

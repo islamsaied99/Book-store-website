@@ -1,0 +1,30 @@
+<div class="container-justify content ">
+    <div class="row my-5 wrap mx-lg-5 inside ">
+        <div  class=" mx-5  col-lg-5 col-md-5    col-sm-12 my-4 insidd">
+            <p style="color: #937DC2; border: 1px solid #937DC2; width: 150px; text-wrap: nowrap;"  class="d-flex py-2 col-lg-3 my-5 justify-content-center  " >best books</p>
+            <h1 style="text-wrap: wrap; width: 450px;" class="my-3 ppp">{{dataofbook.title}}</h1>
+            <p  class="ppp">{{dataofbook.authors}}</p>
+            <button style="width: 160px; border: none; height: 40px; background-color: #937DC2; color: white;" class="my-2" [routerLink]="['/details', book_id]">View  book</button>
+
+        </div>
+        <div  class=" col-lg-1 d-lg-block d-none        col-sm-12 justify-content-center  my-2">
+            <p><B> AUTOGRAPHED <BR>BOOKS {{dataofbook.discount}}%<BR>DISCOUNT </B> </p>
+        </div>
+        
+        <div class="col-md-5   col-lg-4   col-sm-12">
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center ">
+                    
+                    <img  height="350" width="55%" src={{dataofbook.imagethumbnail}} alt="not found" >
+                </div>
+                <div class="  col-lg-11 d-none d-lg-block">
+                    <p class="  d-flex  justify-content-end my-2  ">*within the stock limit</p>
+                </div>
+        </div>
+        </div>
+        
+    </div>
+   
+
+</div>
+

@@ -1,0 +1,35 @@
+.star-rating {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.star {
+  color: #ddd;
+  transition: color 0.2s;
+}
+
+.star:hover,
+.star.active {
+  color: #ffac00;
+}
+
+.review-box {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.review-box .star-rating {
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+.review-box .star {
+  color: #ffac00;
+  transition: color 0.2s;
+}
+
+.review-box .star:hover,
+.review-box .star.active {
+  color: #ffac00;
+}

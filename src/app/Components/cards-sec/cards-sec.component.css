@@ -1,0 +1,115 @@
+.mainbg {
+  background-color: #937dc2;
+}
+.mainColor2 {
+  color: white;
+}
+.textColor {
+  text-shadow: 0 0 1px #937dc2;
+  color: #382c2c;
+}
+#heart {
+  text-shadow: 0 0 3px #937dc2;
+  color: rgb(255, 255, 255);
+  /* font-size: 50px; */
+}
+.circle-button {
+  border: none;
+  background-color: transparent;
+  /* border: 0.5px solid #937dc2;
+
+  border-radius: 30px; Round border */
+  padding: 10px;
+  outline: none; /* Remove outline */
+  box-shadow: none; /* Remove box-shadow */
+}
+
+.circle-button svg {
+  fill: #888; /* Arrow color */
+}
+
+.circle-button:hover svg {
+  fill: #555; /* Hover color */
+  border-color: #555;
+}
+
+.circle-button:active svg {
+  fill: #937dc2; /* Focus and active color */
+}
+
+a{
+  text-decoration:none;
+}
+
+.myCard:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.myCard{
+  margin-block: 10% !important;
+  transition: 0.5s;
+}
+
+.sp2 , .sp3{
+  display: none;
+
+}
+.fg{
+  font-size: 15px;
+}
+
+.sp1  h5{
+  font-size: 13px;
+}
+.sp2  h5{
+  font-size: 13px;
+}
+.sp3  h5{
+  font-size: 13px;
+}
+/* .sp1  p{
+  font-size: 13px;
+}
+.sp2  p{
+  font-size: 13px;
+}
+.sp3  p{
+  font-size: 13px;
+} */
+.sse p{
+  font-size: 10px;
+  margin-bottom: 0px;
+  height: 53px;
+}
+
+@media (max-width: 1199.98px)  { 
+  .sp1{
+    display: none;
+
+  }
+  .sp3{
+    display: none;
+  }
+  .sp2{
+    display: block;
+  }
+
+
+ }
+
+ @media (max-width: 767.98px){
+  .sp1{
+    display: none;
+
+  }
+  .sp3{
+    display: block;
+  }
+  .sp2{
+    display: none;
+  }
+
+
+ } 

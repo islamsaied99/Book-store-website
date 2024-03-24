@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <h3 class="col-4 m-auto mb-5" style="color: rgb(200, 162, 236);">your Favorites Books </h3>
+  </div>
+@if(cartItems)
+{
+  <div
+    *ngFor="let book of cartItems"
+    class="card mb-3 mx-auto mt-3"
+    style="max-width:70%"
+  >
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          [src]="book.imagesmallThumbnail"
+          class="img-fluid rounded-start"
+          alt="{{ book.title }}"
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ book.title }}</h5>
+          <p class="card-text">Price: {{ book.price }}</p>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button
+              type="button"
+              class="btn btn-danger"
+              (click)="removeItem(book.id)"
+            >
+              Remove From Favorite
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+}
+</div>

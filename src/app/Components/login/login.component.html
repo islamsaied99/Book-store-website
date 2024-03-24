@@ -1,0 +1,197 @@
+<div class="background-gradient">
+  <div class="wrapper">
+    <div class="title-text">
+      <div
+        [ngClass]="{
+          title: true,
+          login: currentForm === 'login',
+          signup: currentForm === 'signup'
+        }"
+      >
+        {{ currentForm === "login" ? "Login Form" : "Signup Form" }}
+      </div>
+    </div>
+    <div class="form-container">
+      <div class="slide-controls">
+        <input type="radio" name="slide" id="login" checked />
+        <input type="radio" name="slide" id="signup" />
+        <label for="login" class="slide login" (click)="currentForm = 'login'"
+          >Login</label
+        >
+        <label
+          for="signup"
+          class="slide signup"
+          (click)="currentForm = 'signup'"
+          >Signup</label
+        >
+        <div class="slider-tab"></div>
+      </div>
+      <div class="form-inner">
+        <form
+          *ngIf="currentForm === 'login'"
+          [formGroup]="loginForm"
+          class="login"
+        >
+          <div class="field">
+            <input
+              type="text"
+              placeholder="Email Address"
+              formControlName="loginEmail"
+            />
+            <div
+              *ngIf="
+                loginForm.get('loginEmail')!.hasError('email') &&
+                loginForm.get('loginEmail')!.touched
+              "
+            >
+              Invalid email address
+            </div>
+          </div>
+
+          <div class="field">
+            <input
+              #passwordInput
+              type="{{ showPassword ? 'text' : 'password' }}"
+              placeholder="Password"
+              formControlName="loginPassword"
+            />
+            <div
+              *ngIf="
+                loginForm.get('loginPassword')!.hasError('required') &&
+                loginForm.get('loginPassword')!.touched
+              "
+            >
+              Password is required
+            </div>
+            <div
+              *ngIf="
+                (loginForm.get('loginPassword')!.hasError('minlength') &&
+                  loginForm.get('loginPassword')!.touched) ||
+                (loginForm.get('loginPassword')!.hasError('invalidPassword') &&
+                  loginForm.get('loginPassword')!.touched)
+              "
+            >
+              Invalid password
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="showPassword" class="show-password-label">
+              Show Password
+              <input
+                type="checkbox"
+                id="showPassword"
+                (change)="togglePasswordVisibility()"
+              />
+            </label>
+          </div>
+
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Login" (click)="submitLoginForm()" />
+          </div>
+        </form>
+
+        <form
+          *ngIf="currentForm === 'signup'"
+          [formGroup]="signupForm"
+          action="#"
+          class="signup"
+        >
+          <div class="field">
+            <input
+              type="text"
+              placeholder="First Name"
+              formControlName="firstName"
+            />
+            <div
+              *ngIf="
+                signupForm.get('firstName')!.hasError('minlength') &&
+                signupForm.get('firstName')!.touched
+              "
+            >
+              Invalid Name
+            </div>
+          </div>
+
+          <div class="field">
+            <input
+              type="text"
+              placeholder="Last Name"
+              formControlName="lastName"
+            />
+            <div
+              *ngIf="
+                signupForm.get('lastName')!.hasError('minlength') &&
+                signupForm.get('lastName')!.touched
+              "
+            >
+              Invalid Name
+            </div>
+          </div>
+
+          <div class="field">
+            <input
+              type="text"
+              placeholder="Email Address"
+              formControlName="signupEmail"
+            />
+            <div
+              *ngIf="
+                signupForm.get('signupEmail')!.hasError('email') &&
+                signupForm.get('signupEmail')!.touched
+              "
+            >
+              Invalid email address
+            </div>
+          </div>
+
+          <div class="field">
+            <input
+              #passwordInput
+              type="{{ showPassword ? 'text' : 'password' }}"
+              placeholder="Password"
+              formControlName="signupPassword"
+            />
+            <div
+              *ngIf="
+                signupForm.get('signupPassword')!.hasError('required') &&
+                signupForm.get('signupPassword')!.touched
+              "
+            >
+              Password is required
+            </div>
+            <div
+              *ngIf="
+                (signupForm.get('signupPassword')!.hasError('minlength') &&
+                  signupForm.get('signupPassword')!.touched) ||
+                (signupForm
+                  .get('signupPassword')!
+                  .hasError('invalidPassword') &&
+                  signupForm.get('signupPassword')!.touched)
+              "
+            >
+              Invalid password
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="showPassword" class="show-password-label">
+              Show Password
+              <input
+                type="checkbox"
+                id="showPassword"
+                (change)="togglePasswordVisibility()"
+              />
+            </label>
+          </div>
+
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Signup" (click)="submitSignUpForm()" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

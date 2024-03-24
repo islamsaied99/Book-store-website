@@ -1,0 +1,68 @@
+
+#mainimage{
+    width: 100% !important;
+    height: 350px !important;
+    object-fit: fill !important;
+    padding: 2px !important;
+    box-sizing: border-box !important;
+    border: solid 1px rgb(221, 217, 217);  
+    border-radius: 10px; 
+}
+.bb{
+    width: 3%;
+    border-radius: 100%;
+    background-color: white;
+    border: 1px solid black;
+    transition: all 0.3s;
+}
+
+ .bb:hover{
+    background-color:  rgb(147, 125, 194);
+}
+
+.fff{
+    transition: all 0.3s;
+}
+.bb:hover .fff{
+    color: white;
+}
+/* .imgg{
+    width: 50%;
+} */
+.bbo{
+    transition: all 0.3s;
+}
+.bbo:hover{
+    transform: scale(1.03);
+
+}
+
+.b11{
+    background-color:  rgb(147, 125, 194);
+
+}
+
+@media (max-width: 1000px)  { 
+    .bb{
+        width: 7%;
+        border-radius: 100%;
+        background-color: white;
+        border: 1px solid black;
+        transition: all 0.3s;
+    }
+
+}
+@media (max-width: 460px)  { 
+    .bb{
+        width: 10%;
+        border-radius: 100%;
+        background-color: white;
+        border: 1px solid black;
+        transition: all 0.3s;
+    }
+    .bbo{
+        font-size: 77%;
+        width: 30%;
+    }
+
+}

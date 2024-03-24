@@ -1,0 +1,323 @@
+*{
+    text-decoration: none;
+   
+
+}
+#footer{
+    width: 100%;
+    background-color: rgb(147, 125, 194);
+    
+
+}
+#footer .cont{
+    background-color: rgb(147, 125, 194);
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+#footer .cont .sec1{
+    width: 18%;
+    
+}
+#footer .cont .sec2{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+}
+#footer .cont .sec3{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+}
+#footer .cont .sec4{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+}
+#footer .cont .sec5{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+}
+#footer .cont .sec6{
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+align-items: end;    
+}
+#footer .cont .sec1 .b-world{
+ display: block;
+ color:white;
+ margin-top: 12%;
+margin-left: 25%;
+
+}
+#footer .cont  ul{
+    list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
+
+}
+#footer .cont  ul li{
+    margin-block: 30%;
+    color: white;
+}
+
+#footer .cont .sec5 ul li{
+    margin-block: 11%;
+    color: white;
+
+}
+.sec6 button{
+    background-color: transparent !important;
+    width: 60%;
+}
+.sec6 p , .sec6 button{
+    margin-block: 10%;
+    color: white;
+}
+.sec6 .box{
+    
+    width: 60%;
+}
+.sec6 p{
+    color: white;
+}
+
+#footer .mean{
+
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+ 
+}
+.mean .social{
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+
+
+
+}
+.mean .money{
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+
+
+
+}
+.mean .social .f{
+    font-size: 25px;
+    color :white
+}
+.mean .money .f{
+    font-size: 25px;
+    color: white;
+}
+.last{
+    color: white;
+    border-top: white solid 1px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+.sec1 .social{
+    display: none;
+}
+.title{
+    font-size: 18px;
+    font-weight: bold;
+}
+.cat{
+    margin-top: -11px !important ;
+}
+.bbtnn{
+    background-color:rgb(147, 125, 194) ;
+    border: 0px solid transparent;
+    color: white;
+}
+
+
+@media (max-width: 1199.98px) { 
+
+    #footer .cont{
+        background-color: rgb(147, 125, 194);
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    #footer .mean{
+
+order: 4;    
+     
+    }
+    .sec1 .social{
+        display: block;
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 13%;
+    }
+    .sec1 .social .f{
+        font-size: 25px;
+    color :white;
+   
+    
+    }
+    .mean .money{
+        width: 14%;
+        display: flex;
+        justify-content: space-between;
+    
+    
+    
+    }
+    .sec1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        
+    }
+
+ 
+    #footer .cont .sec1{
+        width: 20%;
+
+    }
+    #footer .cont .sec2{
+        width: 20%;
+
+    }
+    #footer .cont .sec3{
+        width: 20%;
+       
+
+    }
+    #footer .cont .sec4{
+        width: 20%;
+
+    }
+    #footer .cont .sec5{
+        order: 2;
+        width: 20%;
+        margin-left: 25%;
+
+    }
+    #footer .cont .sec6{
+        width: 40%;
+       order: 3;
+       margin-left: 4%;
+    }
+    
+
+
+
+    #footer .cont{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+
+      
+        
+    }
+
+
+
+
+
+
+
+
+ }
+
+ @media (max-width: 991.98px) { 
+
+    #footer .cont .sec1{
+        width: 100%;
+        order: 0;
+    }
+    #footer .cont .sec1 .b-world{
+        display: block;
+        color:white;
+        margin-top: 3%;
+       margin-left: 0%;
+       padding-bottom: 7%;
+       
+       }
+       #footer .cont .sec2{
+        width: 50%;
+        order: 1;
+        justify-content: start;
+
+    }
+    #footer .cont .sec3{
+        width: 50%;
+        order:2;
+        justify-content: start;
+
+    }
+    #footer .cont .sec4{
+        width: 50%;
+        order: 3;
+        justify-content: start;
+
+    }
+    #footer .cont .sec5{
+        width: 50%;
+        order: 4;
+        margin: 0;
+        justify-content: start;
+
+    }
+    #footer .cont .sec6{
+        width: 50%;
+        order: 6;
+        margin-left:  29%;
+        justify-content: start;
+
+
+
+
+    }
+    #footer .mean{
+        order: 7;
+    }
+    #footer .cont{
+        justify-content: space-between;
+    }
+    .mean .social{
+        flex-direction: column;
+       
+    }
+    .mean .social .f{
+        font-size: 30px;
+    }
+    .mean .money .f{
+        font-size: 30px;
+    }
+    .mean .money{
+        flex-direction: column;
+        margin-right: 32%;
+    }
+ 
+
+
+
+
+
+
+
+
+
+
+  }

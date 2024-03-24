@@ -1,0 +1,587 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+<hr />
+<br />
+
+<div class="mt-3 m-auto" style="width: 90%">
+  <h1 class="mb-4 textColor">More items to explore</h1>
+</div>
+<!-- Programming Cards -->
+<div class="w-75 m-auto">
+  <h2>Programming</h2>
+</div>
+
+<swiper-container
+  initial-slide="0"
+  [navigation]="true"
+  [pagination]="{ type: 'bullets', clickable: true }"
+  [autoplay]="false"
+  [keyboard]="false"
+  [slidesPerView]="4"
+  [loop]="false"
+  [spaceBetween]="10"
+  class="swiper-container m-auto sp1"
+  style="width: 80%"
+>
+  <swiper-slide *ngFor="let item of computerBooks">
+    <div class="card myCard" style="margin: 0 10%">
+      <a routerLink="/details/{{ item.id }}">
+        <img
+          src="{{ item['imagesmallThumbnail'] }}"
+          class="card-img-top"
+          alt="..."
+          height="300px"
+        />
+      </a> 
+      <div class="card textColor p-1" style="height: 200px">
+        <h5 class="card-title">{{ item["title"] }}</h5>
+        <p class="card-text">{{ item["publisher"] || "UNKNOWN" }}</p>
+
+        <div class="col-12 mt-auto p-1">
+          <div class="d-flex justify-content-between">
+            <div>${{ item["price"] }}</div>
+            <!-- <div (click)="fav($event)">
+              <i class="fa fa-heart" id="heart"></i>
+            </div> -->
+          </div>
+          <a
+            class="btn mainbg mainColor2 w-100"
+            (click)="addthistocart(item, item.id)"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            Add to cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </swiper-slide>
+</swiper-container>
+<swiper-container
+  initial-slide="0"
+  [navigation]="true"
+  [pagination]="{ type: 'bullets', clickable: true }"
+  [autoplay]="false"
+  [keyboard]="false"
+  [slidesPerView]="2"
+  [loop]="false"
+  [spaceBetween]="10"
+  class="swiper-container m-auto sp2"
+  style="width: 80%"
+>
+  <swiper-slide *ngFor="let item of computerBooks">
+    <div class="card myCard" style="margin: 0 10%">
+      <a routerLink="/details/{{ item.id }}">
+        <img
+          src="{{ item['imagesmallThumbnail'] }}"
+          class="card-img-top"
+          alt="..."
+          height="300px"
+        />
+      </a>
+      <div class="card textColor p-1" style="height: 200px">
+        <h5 class="card-title">{{ item["title"] }}</h5>
+        <p class="card-text">{{ item["publisher"] || "UNKNOWN" }}</p>
+
+        <div class="col-12 mt-auto p-1">
+          <div class="d-flex justify-content-between">
+            <div>${{ item["price"] }}</div>
+            <!-- <div (click)="fav($event)">
+              <i class="fa fa-heart" id="heart"></i>
+            </div> -->
+          </div>
+          <a
+            class="btn mainbg mainColor2 w-100"
+            (click)="addthistocart(item, item.id)"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            Add to cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </swiper-slide>
+</swiper-container>
+<swiper-container
+  initial-slide="0"
+  [navigation]="true"
+  [pagination]="{ type: 'bullets', clickable: true }"
+  [autoplay]="false"
+  [keyboard]="false"
+  [slidesPerView]="1"
+  [loop]="false"
+  [spaceBetween]="10"
+  class="swiper-container m-auto sp3"
+  style="width: 80%"
+>
+  <swiper-slide *ngFor="let item of computerBooks">
+    <div class="card myCard" style="margin: 0 10%">
+      <a routerLink="/details/{{ item.id }}">
+        <img
+          src="{{ item['imagesmallThumbnail'] }}"
+          class="card-img-top"
+          alt="..."
+          height="300px"
+        />
+      </a>
+      <div class="card textColor p-1" style="height: 200px">
+        <h5 class="card-title">{{ item["title"] }}</h5>
+        <p class="card-text">{{ item["publisher"] || "UNKNOWN" }}</p>
+
+        <div class="col-12 mt-auto p-1">
+          <div class="d-flex justify-content-between">
+            <div>${{ item["price"] }}</div>
+            <!-- <div (click)="fav($event)">
+              <i class="fa fa-heart" id="heart"></i>
+            </div> -->
+          </div>
+          <a
+            class="btn mainbg mainColor2 w-100"
+            (click)="addthistocart(item, item.id)"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            Add to cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </swiper-slide>
+</swiper-container>
+<hr />
+<!-- End of cards -->
+
+<!-- Science Cards -->
+<div class="w-75 m-auto">
+  <h2>Science</h2>
+</div>
+
+<swiper-container
+  initial-slide="0"
+  [navigation]="true"
+  [pagination]="{ type: 'bullets', clickable: true }"
+  [autoplay]="false"
+  [keyboard]="false"
+  [slidesPerView]="4"
+  [loop]="false"
+  [spaceBetween]="10"
+  class="swiper-container m-auto sp1"
+  style="width: 80%"
+>
+  <swiper-slide *ngFor="let item of scienceBooks">
+    <div class="card myCard" style="margin: 0 10%">
+      <a routerLink="/details/{{ item.id }}">
+        <img
+          src="{{ item['imagesmallThumbnail'] }}"
+          class="card-img-top"
+          alt="..."
+          height="300px"
+        />
+      </a>
+      <div class="card textColor p-1" style="height: 200px">
+        <h5 class="card-title">{{ item["title"] }}</h5>
+        <p class="card-text">
+          {{ item["publisher"] || "UNKNOWN" || "UNKNOWN" }}
+        </p>
+
+        <div class="col-12 mt-auto p-1">
+          <div class="d-flex justify-content-between">
+            <div>${{ item["price"] }}</div>
+            <!-- <div (click)="fav($event)">
+              <i class="fa fa-heart" id="heart"></i>
+            </div> -->
+          </div>
+          <a
+            class="btn mainbg mainColor2 w-100"
+            (click)="addthistocart(item, item.id)"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            Add to cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </swiper-slide>
+</swiper-container>
+<swiper-container
+  initial-slide="0"
+  [navigation]="true"
+  [pagination]="{ type: 'bullets', clickable: true }"
+  [autoplay]="false"
+  [keyboard]="false"
+  [slidesPerView]="2"
+  [loop]="false"
+  [spaceBetween]="10"
+  class="swiper-container m-auto sp2"
+  style="width: 80%"
+>
+  <swiper-slide *ngFor="let item of scienceBooks">
+    <div class="card myCard" style="margin: 0 10%">
+      <a routerLink="/details/{{ item.id }}">
+        <img
+          src="{{ item['imagesmallThumbnail'] }}"
+          class="card-img-top"
+          alt="..."
+          height="300px"
+        />
+      </a>
+      <div class="card textColor p-1" style="height: 200px">
+        <h5 class="card-title">{{ item["title"] }}</h5>
+        <p class="card-text">{{ item["publisher"] || "UNKNOWN" }}</p>
+
+        <div class="col-12 mt-auto p-1">
+          <div class="d-flex justify-content-between">
+            <div>${{ item["price"] }}</div>
+            <!-- <div (click)="fav($event)">
+              <i class="fa fa-heart" id="heart"></i>
+            </div> -->
+          </div>
+          <a
+            class="btn mainbg mainColor2 w-100"
+            (click)="addthistocart(item, item.id)"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            Add to cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </swiper-slide>
+</swiper-container>
+<swiper-container
+  initial-slide="0"
+  [navigation]="true"
+  [pagination]="{ type: 'bullets', clickable: true }"
+  [autoplay]="false"
+  [keyboard]="false"
+  [slidesPerView]="1"
+  [loop]="false"
+  [spaceBetween]="10"
+  class="swiper-container m-auto sp3"
+  style="width: 80%"
+>
+  <swiper-slide *ngFor="let item of scienceBooks">
+    <div class="card myCard" style="margin: 0 10%">
+      <a routerLink="/details/{{ item.id }}">
+        <img
+          src="{{ item['imagesmallThumbnail'] }}"
+          class="card-img-top"
+          alt="..."
+          height="300px"
+        />
+      </a>
+      <div class="card textColor p-1" style="height: 200px">
+        <h5 class="card-title">{{ item["title"] }}</h5>
+        <p class="card-text">{{ item["publisher"] || "UNKNOWN" }}</p>
+
+        <div class="col-12 mt-auto p-1">
+          <div class="d-flex justify-content-between">
+            <div>${{ item["price"] }}</div>
+            <!-- <div (click)="fav($event)">
+              <i class="fa fa-heart" id="heart"></i>
+            </div> -->
+          </div>
+          <a
+            class="btn mainbg mainColor2 w-100"
+            (click)="addthistocart(item, item.id)"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            Add to cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </swiper-slide>
+</swiper-container>
+<hr />
+<!-- End of cards -->
+
+<!-- Psychology Cards -->
+<div class="w-75 m-auto">
+  <h2>Psychology</h2>
+</div>
+
+<swiper-container
+  initial-slide="0"
+  [navigation]="true"
+  [pagination]="{ type: 'bullets', clickable: true }"
+  [autoplay]="false"
+  [keyboard]="false"
+  [slidesPerView]="4"
+  [loop]="false"
+  [spaceBetween]="10"
+  class="swiper-container m-auto sp1"
+  style="width: 80%"
+>
+  <swiper-slide *ngFor="let item of psychologyBooks">
+    <div class="card myCard" style="margin: 0 10%">
+      <a routerLink="/details/{{ item.id }}">
+        <img
+          src="{{ item['imagesmallThumbnail'] }}"
+          class="card-img-top"
+          alt="..."
+          height="300px"
+        />
+      </a>
+      <div class="card textColor p-1" style="height: 200px">
+        <h5 class="card-title">{{ item["title"] }}</h5>
+        <p class="card-text">{{ item["publisher"] || "UNKNOWN" }}</p>
+
+        <div class="col-12 mt-auto p-1">
+          <div class="d-flex justify-content-between">
+            <div>${{ item["price"] }}</div>
+            <!-- <div (click)="fav($event)">
+              <i class="fa fa-heart" id="heart"></i>
+            </div> -->
+          </div>
+          <a
+            class="btn mainbg mainColor2 w-100"
+            (click)="addthistocart(item, item.id)"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            Add to cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </swiper-slide>
+</swiper-container>
+<swiper-container
+  initial-slide="0"
+  [navigation]="true"
+  [pagination]="{ type: 'bullets', clickable: true }"
+  [autoplay]="false"
+  [keyboard]="false"
+  [slidesPerView]="2"
+  [loop]="false"
+  [spaceBetween]="10"
+  class="swiper-container m-auto sp2"
+  style="width: 80%"
+>
+  <swiper-slide *ngFor="let item of psychologyBooks">
+    <div class="card myCard" style="margin: 0 10%">
+      <a routerLink="/details/{{ item.id }}">
+        <img
+          src="{{ item['imagesmallThumbnail'] }}"
+          class="card-img-top"
+          alt="..."
+          height="300px"
+        />
+      </a>
+      <div class="card textColor p-1" style="height: 200px">
+        <h5 class="card-title">{{ item["title"] }}</h5>
+        <p class="card-text">{{ item["publisher"] || "UNKNOWN" }}</p>
+
+        <div class="col-12 mt-auto p-1">
+          <div class="d-flex justify-content-between">
+            <div>${{ item["price"] }}</div>
+            <!-- <div (click)="fav($event)">
+              <i class="fa fa-heart" id="heart"></i>
+            </div> -->
+          </div>
+          <a
+            class="btn mainbg mainColor2 w-100"
+            (click)="addthistocart(item, item.id)"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            Add to cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </swiper-slide>
+</swiper-container>
+<swiper-container
+  initial-slide="0"
+  [navigation]="true"
+  [pagination]="{ type: 'bullets', clickable: true }"
+  [autoplay]="false"
+  [keyboard]="false"
+  [slidesPerView]="1"
+  [loop]="false"
+  [spaceBetween]="10"
+  class="swiper-container m-auto sp3"
+  style="width: 80%"
+>
+  <swiper-slide *ngFor="let item of psychologyBooks">
+    <div class="card myCard" style="margin: 0 10%">
+      <a routerLink="/details/{{ item.id }}">
+        <img
+          src="{{ item['imagesmallThumbnail'] }}"
+          class="card-img-top"
+          alt="..."
+          height="300px"
+        />
+      </a>
+      <div class="card textColor p-1" style="height: 200px">
+        <h5 class="card-title">{{ item["title"] }}</h5>
+        <p class="card-text">{{ item["publisher"] || "UNKNOWN" }}</p>
+
+        <div class="col-12 mt-auto p-1">
+          <div class="d-flex justify-content-between">
+            <div>${{ item["price"] }}</div>
+            <!-- <div (click)="fav($event)">
+              <i class="fa fa-heart" id="heart"></i>
+            </div> -->
+          </div>
+          <a
+            class="btn mainbg mainColor2 w-100"
+            (click)="addthistocart(item, item.id)"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            Add to cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </swiper-slide>
+</swiper-container>
+<hr />
+<!-- End of cards -->
+
+<!-- YoungAdultFiction Cards -->
+<div class="w-75 m-auto">
+  <h2>Stories</h2>
+</div>
+
+<swiper-container
+  initial-slide="0"
+  [navigation]="true"
+  [pagination]="{ type: 'bullets', clickable: true }"
+  [autoplay]="false"
+  [keyboard]="false"
+  [slidesPerView]="4"
+  [loop]="false"
+  [spaceBetween]="10"
+  class="swiper-container m-auto sp1 sse"
+  style="width: 80%"
+>
+  <swiper-slide *ngFor="let item of YoungAdultFiction">
+    <div class="card myCard" style="margin: 0 10%">
+      <a routerLink="/details/{{ item.id }}">
+        <img
+          src="{{ item['imagesmallThumbnail'] }}"
+          class="card-img-top"
+          alt="..."
+          height="300px"
+        />
+      </a>
+      <div class="card textColor p-1" style="height: 200px">
+        <h5 class="card-title">{{ item["title"] }}</h5>
+        <p class="card-text">{{ item["publisher"] || "UNKNOWN" }}</p>
+
+        <div class="col-12 mt-auto p-1">
+          <div class="d-flex justify-content-between">
+            <div>${{ item["price"] }}</div>
+            <!-- <div (click)="fav($event)">
+              <i class="fa fa-heart" id="heart"></i>
+            </div> -->
+          </div>
+          <a
+            class="btn mainbg mainColor2 w-100"
+            (click)="addthistocart(item, item.id)"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            Add to cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </swiper-slide>
+</swiper-container>
+<swiper-container
+  initial-slide="0"
+  [navigation]="true"
+  [pagination]="{ type: 'bullets', clickable: true }"
+  [autoplay]="false"
+  [keyboard]="false"
+  [slidesPerView]="2"
+  [loop]="false"
+  [spaceBetween]="10"
+  class="swiper-container m-auto sp2 sse"
+  style="width: 80%"
+>
+  <swiper-slide *ngFor="let item of YoungAdultFiction">
+    <div class="card myCard" style="margin: 0 10%">
+      <a routerLink="/details/{{ item.id }}">
+        <img
+          src="{{ item['imagesmallThumbnail'] }}"
+          class="card-img-top"
+          alt="..."
+          height="300px"
+        />
+      </a>
+      <div class="card textColor p-1" style="height: 200px">
+        <h5 class="card-title">{{ item["title"] }}</h5>
+        <p class="card-text">{{ item["publisher"] || "UNKNOWN" }}</p>
+
+        <div class="col-12 mt-auto p-1">
+          <div class="d-flex justify-content-between">
+            <div>${{ item["price"] }}</div>
+            <!-- <div (click)="fav($event)">
+              <i class="fa fa-heart" id="heart"></i>
+            </div> -->
+          </div>
+          <a
+            class="btn mainbg mainColor2 w-100"
+            (click)="addthistocart(item, item.id)"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            Add to cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </swiper-slide>
+</swiper-container>
+<swiper-container
+  initial-slide="0"
+  [navigation]="true"
+  [pagination]="{ type: 'bullets', clickable: true }"
+  [autoplay]="false"
+  [keyboard]="false"
+  [slidesPerView]="1"
+  [loop]="false"
+  [spaceBetween]="10"
+  class="swiper-container m-auto sp3 sse"
+  style="width: 80%"
+>
+  <swiper-slide *ngFor="let item of YoungAdultFiction">
+    <div class="card myCard" style="margin: 0 10%">
+      <a routerLink="/details/{{ item.id }}">
+        <img
+          src="{{ item['imagesmallThumbnail'] }}"
+          class="card-img-top"
+          alt="..."
+          height="300px"
+        />
+      </a>
+      <div class="card textColor p-1" style="height: 200px">
+        <h5 class="card-title">{{ item["title"] }}</h5>
+        <p class="card-text">{{ item["publisher"] || "UNKNOWN" }}</p>
+
+        <div class="col-12 mt-auto p-1">
+          <div class="d-flex justify-content-between">
+            <div>${{ item["price"] }}</div>
+            <!-- <div (click)="fav($event)">
+              <i class="fa fa-heart" id="heart"></i>
+            </div> -->
+          </div>
+          <a
+            class="btn mainbg mainColor2 w-100"
+            (click)="addthistocart(item, item.id)"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            Add to cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </swiper-slide>
+</swiper-container>
+<hr />
+<!-- End of cards -->

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-9846671ed7c9dd69b10c93f6b04b31fe.css?vsn=d"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-body-tertiary" id="parent">
+      <div class="container-fluid content">
+        <div class="boxx">
+          <a style="font-weight: 500; font-size: 18px;" class="b-world" href="#" >E-Book</a>
+
+          <i class="fa-regular fa-pipe pipe"></i>
+          <div class="we">we love books</div>
+        </div>
+
+        <!-- <form class="d-flex searchh form formm" role="search">
+            <input [(ngModel)]="books"  class="form-control me-2" placeholder="type any book here" aria-label="Search"   (keyup)="sendData($event)">
+            <i class="fa-solid fa-magnifying-glass sicon"></i>
+            <ul *ngIf="searchTerm" >
+             <li *ngFor="let book of filterdbooks ">
+              <a style="color: white;" (click)="remove()"  routerLink="details/{{book.id}}">{{book.volumeInfo.title}} </a>
+              </li>
+            </ul>
+          </form> -->
+        <div class="bahs">
+          <i class="fa-solid fa-magnifying-glass sicon"></i>
+        </div>
+
+        <div class="phone">
+          <i class="fa-solid fa-phone ph"></i>
+          <span>+44587999000</span>
+        </div>
+        <i
+          class="fa-solid fa-cart-shopping con ss"
+          (click)="goToAddToCart()"
+        ></i>
+        @if (checkLogin) {
+        <div class="icons">
+         
+          <i
+            class="fa-solid fa-cart-shopping con"
+            (click)="goToAddToCart()"
+            style="cursor: pointer"
+          ></i>
+          <i class="fa-solid fa-pipe con"></i>
+          <i
+            class="fa-solid fa-heart con"
+            (click)="goToAddToFav()"
+            style="cursor: pointer"
+          ></i>
+          <i class="fa-solid fa-pipe con"></i>
+
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle logoutbtn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+               <i class="fa-solid fa-user con"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="logout"><a class="dropdown-item" href="#" (click)=" logout()">LogOut</a></li>
+            
+            </ul>
+          
+        </div>
+          <span class="thepre">{{userName}}</span>
+        </div>
+
+        <span class="the_last" >Hello ,{{userName}}</span>
+
+          }
+          
+          @else{
+              
+          <button class="button" routerLink="login/">
+            LOGIN | REGISTER
+            <div class="hoverEffect">
+              <div></div>
+            </div>
+          </button>
+          }
+       
+          
+
+        <div class="collapse navbar-collapse listp" id="navbarSupportedContent" [ngClass]="{'show': !isNavbarCollapsed}">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 list menu">
+            <li>
+              <form class="d-flex searchh form formm" role="search">
+                <input
+                  class="form-control me-2"
+                  placeholder="type any book here"
+                  aria-label="Search"
+                  (keyup)="sendData1($event)"
+                />
+                <i class="fa-solid fa-magnifying-glass sicon"></i>
+                <ul *ngIf="searchTerm" class="menu">
+                  <li class="lista" *ngFor="let book of filterdbooks1 ">
+                    <a routerLink="details/{{ book.id }}" (click)="remove()"  (click)="toggleNavbar()"
+                      >{{ book.title }}
+                    </a>
+                  </li>
+                </ul>
+              </form>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink=""  (click)="toggleNavbar()"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="details" (click)="goToAddToCart()"  (click)="toggleNavbar()"
+                >Cart</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="details" (click)="goToAddToFav()"  (click)="toggleNavbar()"
+                >Favorite</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="about_us"  (click)="toggleNavbar()">About Us</a> 
+            </li>
+            <li class="nav-item logg" (click)=" logout()">
+              <button style="background-color: transparent; border: transparent ; font-weight: bold;"><a class="nav-link"  (click)="toggleNavbar()" >LogOut</a></button>
+            </li>
+           
+
+            <!-- ///////////////////////////////////////// -->
+            <!-- <li class="nav-item ii">
+              <a class="nav-link" href="#">The must read</a>
+            </li>
+            <li class="nav-item ii">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item ii">
+              <a class="nav-link" href="#">Promotion of the mount</a>
+            </li>
+            <li class="nav-item ii">
+              <a class="nav-link" href="#">plublishs</a>
+            </li>
+            <li class="nav-item ii">
+              <a class="nav-link" href="#">Subscribe to the newsletter</a>
+            </li> -->
+          </ul>
+        </div>
+
+        <button
+          class="navbar-toggler bbb"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          (click)="toggleNavbar()"
+        >
+          <span class="hola"><i class="fa-solid fa-bars"></i> </span>
+        </button>
+      </div>
+
+      <!-- <div class="content two">
+        <div class="second ">
+            <div class="collapse navbar-collapse listp2" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">The must read</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">News</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Promotion of the mount</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">plublishs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Subscribe to the newsletter</a>
+                  </li>
+
+
+                </ul>
+
+              </div>
+        </div>
+    </div> -->
+    </nav>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary parent2">
+      <div class="container-fluid content2">
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+        <div class="ulparent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 listtt">
+            <li class="nav-item l1">
+              <a class="nav-link" href="#">The must read</a>
+            </li>
+            <li class="nav-item l2">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item l3">
+              <a class="nav-link" href="#">Promotion of the mount</a>
+            </li>
+            <li class="nav-item l4">
+              <a class="nav-link" href="#">plublishs</a>
+            </li>
+            <li class="nav-item l5">
+              <a class="nav-link" href="#">Subscribe to the newsletter</a>
+            </li>
+          </ul>
+          <div class="box1">
+            <i class="fa-solid fa-phone ph"></i>
+            <span>+44587999000</span>
+
+            <button class="btn btn1" type="submit">request a call</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="space"></div>
+  </body>
+</html>

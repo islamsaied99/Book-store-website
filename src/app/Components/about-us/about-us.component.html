@@ -1,0 +1,27 @@
+<ion-content id="container" class="ion-padding center-container">
+  <swiper-container
+    #swiperEx
+    initial-slide="0"
+    [navigation]="true"
+    [pagination]="{ type: 'bullets', clickable: true }"
+    [autoplay]="true"
+    [keyboard]="true"
+    [slidesPerView]="1"
+    [scrollbar]="{ draggable: true }"
+    effect="cube"
+  >
+    <swiper-slide *ngFor="let card of swiperData">
+      <ion-card class="rounded-image-container">
+        <ion-card-content class="cube-side">
+          <img [src]="card.image" alt="Image" class="rounded-image" />
+          <div class="content-text">
+            <h1>{{ card.title }}</h1>
+            <p>{{ card.text }}</p>
+            <p>{{ card.details }}</p>
+            <p>{{ card.details2 }}</p>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+  </swiper-container>
+</ion-content>
